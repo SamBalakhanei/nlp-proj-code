@@ -1,41 +1,4 @@
 #!/usr/bin/env python3
-"""
-INSTRUCTIONS:
-1. Put this file, the .db file, and the .xlsx file, and requirements.txt in the same directory
-2. Make .env file and put: HF_TOKEN=<token>
-3. Run in terminal (in venv): pip install -r requirements.txt
-4. Test that prompt gen works with the command:
-
-python3 benchmark.py \       
-  --db ./nport.db \
-  --questions "./SQL Question.xlsx" \
-  --sheet Sheet1 \
-  --question_col "Natural Language Query" \
-  --row_start <ROW_NUMBER1> --row_end <ROW_NUMBER2> \
-  --out <ROW_NUMBER1>_<ROW_NUMBER2>.jsonl \
-  --include_sample \
-
-(replace ROW_NUMBER with starting row and ending row from the google sheet (inclusive))
-
-5. That should create a file called "prompts_<ROW_NUMBER>_<ROW_NUMBER2>.jsonl" so go in there and make sure its the right questions and system prompt in there
-6. Run this command to actually run the benchmark:
-
-python3 benchmark.py \       
-  --db ./nport.db \
-  --questions "./SQL Question.xlsx" \
-  --sheet Sheet1 \
-  --question_col "Natural Language Query" \
-  --row_start <ROW_NUMBER1> --row_end <ROW_NUMBER2> \
-  --out <ROW_NUMBER1>_<ROW_NUMBER2>.jsonl \
-  --include_samples \
-  --run \
-  --model "Qwen/Qwen2.5-7B-Instruct" \
-  --max_tokens 256 \
-  --temperature 0.0 \
-  
-  7. That should create the file completions_<ROW_NUMBER1>_<ROW_NUMBER2>.jsonl with the generated sql. Go to chatgpt and give it and tell it to get rid of the \n so u can test it
-
-"""
 from __future__ import annotations
 import os, json, time, argparse, sqlite3
 from typing import List, Dict, Any, Tuple, Optional
