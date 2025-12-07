@@ -22,7 +22,7 @@ python3 benchmark.py \
   --db ./nport.db \
   --questions "<PATH_TO_QUESTIONS_SHEET_FILE>" \
   --sheet <SHEET_NAME> \
-  --question_col "<COLUMN WITH QUESTIONS NAME>" \
+  --question_col "<COLUMN_QUESTIONS_NAME>" \
   --row_start <ROW_NUMBER1> --row_end <ROW_NUMBER2> \
   --out <ROW_NUMBER1>_<ROW_NUMBER2>.jsonl \
   --include_sample \
@@ -36,7 +36,7 @@ python3 benchmark.py \
   --db ./nport.db \
   --questions "<PATH_TO_QUESTIONS_SHEET_FILE>" \
   --sheet <SHEET_NAME> \
-  --question_col "<COLUMN WITH QUESTIONS NAME>" \
+  --question_col "<COLUMN_QUESTIONS_NAME>" \
   --row_start <ROW_NUMBER1> --row_end <ROW_NUMBER2> \
   --out <ROW_NUMBER1>_<ROW_NUMBER2>.jsonl \
   --include_samples \
