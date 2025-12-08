@@ -17,7 +17,7 @@ REPOSITORY INSTALLATION INSTRUCTIONS:
 
 
 RUN INSTRUCTIONS:
-0. Go here https://drive.google.com/drive/u/0/folders/1Xh1wC_80vPlXchPL5QcK0fwNhtEgrdOl and download the .db file and sample .xlsx file and put it in /nlp-final-proj/ (same directory as benchmark.py)
+0. Go here https://drive.google.com/drive/u/0/folders/1Xh1wC_80vPlXchPL5QcK0fwNhtEgrdOl and download the .db file and sample .xlsx file and put it in /nlp-proj-code/ (same directory as benchmark.py)
 1. Run the command below, replacing variables respectively
 
 python3 benchmark.py \       
@@ -29,7 +29,7 @@ python3 benchmark.py \
   --out <ROW_NUMBER1>_<ROW_NUMBER2>.jsonl \
   --include_sample \
 
-(replace ROW_NUMBER1 with starting row and ROW)NUMBER2 with ending row from the .xlsx file (inclusive))
+(replace ROW_NUMBER1 with starting row and ROW_NUMBER2 with ending row from the .xlsx file (inclusive))
 
 5. That should create a file called "prompts_<ROW_NUMBER1>_<ROW_NUMBER2>.jsonl" so go in there and make sure its the right questions and system prompt in there
 6. Run this command to actually run the benchmark:
